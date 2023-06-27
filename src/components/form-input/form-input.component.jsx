@@ -3,6 +3,7 @@ import "./form-input.styles.scss";
 const FormInput = ({ label, ...otherProps }) => {
     return (
         <div className="group">
+            <input className="form-input" {...otherProps}/>
             {label && (
             <label className={`${
                 otherProps.value.length ? "shrink" : ""
@@ -10,7 +11,6 @@ const FormInput = ({ label, ...otherProps }) => {
                 >{label}
                 </label>
                 )}
-                <input className="form-input" {...otherProps}/>
         </div>
     )
 }
