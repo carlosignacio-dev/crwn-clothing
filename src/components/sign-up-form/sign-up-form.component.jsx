@@ -57,8 +57,7 @@ const SignUpForm = () => {
                 onChange={handleChange} 
                 name="displayName" 
                 value={displayName}/>
-
-                <label>Email</label>
+                
                 <FormInput type="email" 
                 label="Email"
                 required 
