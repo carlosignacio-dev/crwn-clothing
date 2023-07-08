@@ -38,6 +38,7 @@ export const CartContext = createContext({
     cartItems: [],
     addItemToCart: () => {},
     removeItemFromCart: () => {},
+    ClearItemFromCart: () => {},
     cartCount: 0,
 });
 
@@ -53,6 +54,10 @@ export const CartProvider = ({ children }) => {
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addCartItem(cartItems, productToAdd))
+    }
+    
+    const removeItemToCart = (cartItemToRemove) => {
+        setCartItems(removeCartItem(cartItems, cartItemToRemove))
     }
     
     const removeItemToCart = (cartItemToRemove) => {
